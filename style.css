@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --primary-color:  hsl(210, 11%, 15%);
+    font-size: 62.5%; /*1 rem = 10 px / reseta o rem para ficar igual px*/ 
+}
+
+body{
+    font-family: "DM Sans";
+    font-size: 1.6rem; /*1.6rem = 16px*/
+
+    text-align: center;
+
+    overflow: overlay;
+
+    background: var(--primary-color);
+    
+
+}
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width:37.5rem ;
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+  
+    
+}
+
+
+
+button {
+    
+    background-color: var(--primary-color);
+    border: none;
+   
+
+
+    padding: 1.6rem 3.2rem;
+    width: fit-content; /* largura fica adaptada ao conteudo*/
+
+/* 
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700; */
+
+    display: flex; /*mexe com os filhos do elemento*/
+    align-items: center;
+    justify-content: center;
+    /* gap: 1.6rem; adiciona espaço entre os elementos */
+
+    text-decoration: none;
+
+    
+}
+
+
+
+.body-container .wrapper{
+    position: relative;
+    width: 37.5rem;
+    height: 12.8rem;
+    top: 18.4rem;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4.1rem;
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+}
