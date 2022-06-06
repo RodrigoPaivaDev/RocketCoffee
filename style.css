@@ -8,41 +8,44 @@
 html{
     width: 100%;
     height: 100%;
+    
 }
 :root{
     --primary-color:  hsl(210, 11%, 15%);
     font-size: 62.5%; /*1 rem = 10 px / reseta o rem para ficar igual px*/ 
+    --button: #8257E5;
 }
 
 body{
+
+
     font-family: "DM Sans";
     font-size: 1.6rem; /*1.6rem = 16px*/
 
     text-align: center;
 
     overflow: overlay;
+    background-color: var(--primary-color);
 
-    background: var(--primary-color);
-    
 
 }
 
 
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width:37.5rem ;
+    width:45rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
-  
+
     
 }
 
 
 
-button {
+.open-menu {
     
     background-color: var(--primary-color);
     border: none;
@@ -70,11 +73,11 @@ button {
 
 
 
-.body-container .wrapper{
+.body-container .wrapper h2{
     position: relative;
     width: 37.5rem;
     height: 12.8rem;
-    top: 18.4rem;
+    top: 12rem;
 
     font-family: 'Manrope';
     font-style: normal;
@@ -86,3 +89,100 @@ button {
 
     color: #FFFFFF;
 }
+
+.wrapper .button-link{
+    /* box-sizing: border-box; */
+
+/* Auto layout */
+
+
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 10rem;
+
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+
+    position: absolute;
+    width: 24rem;
+    height: 5rem;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    top: 45rem;
+
+    border: 2px solid #8257E5;
+    border-radius: 6px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.button-link span{
+    font-size: 2.5rem;
+}
+
+
+.wrapper h1{
+    position: absolute;
+    width: 296px;
+    height: 54px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    top:55rem;
+    
+
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 5rem;
+
+
+    color: #FFFFFF;
+
+
+
+}
+
+.wrapper p{
+    position: absolute;
+    width: 50rem;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    top: 65rem;
+
+
+    font-family: 'Manrope';
+   
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: .7rem;
+
+
+
+
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+
+.wrapper .img-content{
+    position: absolute;
+    width: 50vw;
+    height: 50hw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    top: 70rem;
+
+  
+    
+}
+
