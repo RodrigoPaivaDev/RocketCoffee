@@ -1,3 +1,7 @@
+
+/* ============================================= GERAL ======================================== */
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,15 +14,15 @@ html{
     height: 100%;
     
 }
+
 :root{
     --primary-color:  hsl(210, 11%, 15%);
+    --secondary-color: #8257E5;
     font-size: 62.5%; /*1 rem = 10 px / reseta o rem para ficar igual px*/ 
     --button: #8257E5;
 }
 
 body{
-
-
     font-family: "DM Sans";
     font-size: 1.6rem; /*1.6rem = 16px*/
 
@@ -27,9 +31,10 @@ body{
     overflow: overlay;
     background-color: var(--primary-color);
 
-
 }
 
+
+/* ============================================= CORPO DA PÁGINA ======================================== */
 
 .wrapper {
     display: flex;
@@ -39,38 +44,8 @@ body{
     width:45rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
-
-    
+  
 }
-
-
-
-.open-menu, .close-menu {
-    
-    background-color: var(--primary-color);
-    border: none;
-   
-
-
-    padding: 1.6rem 3.2rem;
-    width: fit-content; /* largura fica adaptada ao conteudo*/
-
-/* 
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 700; */
-
-    display: flex; /*mexe com os filhos do elemento*/
-    align-items: center;
-    justify-content: center;
-    /* gap: 1.6rem; adiciona espaço entre os elementos */
-
-    text-decoration: none;
-
-    
-}
-
 
 
 .body-container .wrapper h2{
@@ -86,14 +61,13 @@ body{
     line-height: 4.1rem;
     text-align: center;
     letter-spacing: 0.09em;
-
     color: #FFFFFF;
 }
 
-.wrapper .button-link{
-    /* box-sizing: border-box; */
 
-/* Auto layout */
+.wrapper .button-link{
+    box-sizing: border-box;
+
 
 
     font-family: 'Manrope';
@@ -118,7 +92,7 @@ body{
     transform: translateX(-50%);
     top: 45rem;
 
-    border: 2px solid #8257E5;
+    border: 2px solid var(--secondary-color);
     border-radius: 6px;
 
     text-decoration: none;
@@ -143,8 +117,6 @@ body{
     font-family: 'Manrope';
     font-weight: 700;
     font-size: 5rem;
-
-
     color: #FFFFFF;
 
 
@@ -161,12 +133,9 @@ body{
 
 
     font-family: 'Manrope';
-   
     font-weight: 900;
     font-size: 5rem;
     line-height: .7rem;
-
-
 
 
     text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
@@ -175,49 +144,103 @@ body{
 
 .wrapper .img-content{
     position: absolute;
+
     width: 50vw;
     height: 50hw;
     left: 50%;
     right: 50%;
-    transform: translateX(-50%);
     top: 70rem;
+ 
 
-  
+    transform: translateX(-50%);
+   
     
 }
 
-/* body.menu-expanded{
-    overflow: hidden;
-} */
 
-.menu{
+/* ============================================= MENU ======================================== */
+
+.logo, .open-menu, .close-menu{
+    background-color: var(--primary-color);
+    border: none;
+
+    position: relative;
+    margin-top: 3rem;
+    padding: 1.6rem 3.2rem;
+    width: fit-content; /* largura fica adaptada ao conteudo*/
+
+
+    display: flex; /*mexe com os filhos do elemento*/
+    align-items: center;
+    justify-content: center;
+
+
+    text-decoration: none; 
+}
+
+.menu,
+.close-menu{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu{
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+body.menu-expanded {
+    overflow: hidden;
+}
+
+body.menu-expanded .open-menu{
+    visibility: hidden;
+}
+
+body.menu-expanded .menu{
     z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--primary-color);
     width: 100vw;
-    height: 100vh;
-    padding-top: 7.2rem;
+    height: 100%;
+    padding-top: 8rem;
+
+    background: var(--primary-color);
+  
+
+    transform: translateY(0);
+    transition: transform 300ms;
 }
 
+body.menu-expanded,
 .wrapper .logo, 
 .close-menu{
     z-index: 3;
 }
 
-.menu ul:nth-child(1){   /*aplica apenas para o filho ul*/
+body.menu-expanded
+.menu ul{   /*aplica apenas para o filho ul*/
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4.8rem;
-    margin-top: 6rem;
+    margin-top: 7rem;
+    width: 100vw;
 
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
+    list-style: none;
+   
 }
 
+body.menu-expanded
 .menu ul li a{
+    list-style: none;
     color: white;
     text-decoration: none;
     font-family: 'Manrope';
@@ -226,16 +249,23 @@ body{
  
 }
 
+
+body.menu-expanded
 .menu ul li{
     content: "";
     position: relative;
     border-bottom: 1px solid black;
-    width: 100vw;
+    width: 50%;
     height: 5rem;
 }
 
+body.menu-expanded
 .menu ul li:hover{
-    border-left: 5px solid #8257E5;
-    
+    border-left: 5px solid var(--secondary-color);
+     
+}
+
+.menu{
+    transform: translateY(100%)
 }
 
