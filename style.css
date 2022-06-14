@@ -269,3 +269,128 @@ body.menu-expanded
     transform: translateY(100%)
 }
 
+
+
+@media (min-width: 1024px){
+
+    body{
+        overflow: hidden;
+        
+        background: rgb(131,58,180);
+        background: linear-gradient(200deg, rgba(131,58,180,1) -25%, rgba(0,0,0,1) 30%, rgba(131,58,180,1) 260%);
+
+    
+    }
+  
+    .wrapper .menu{
+        margin: 0;
+        padding: 0;
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+        color: initial;
+        background-color: initial;
+        filter: initial;
+    }
+
+    .wrapper .logo svg,
+    .wrapper .open-menu,
+    .wrapper .close-menu{
+        display: none;
+    
+    }
+
+    .wrapper .menu ul{
+        width: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        right: 8rem;
+        
+      
+        
+    }
+
+    .wrapper .menu ul li a{
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-family: 'Manrope';
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        line-height: 4rem;
+        color: #fff;
+       
+        
+        
+    }
+
+    .wrapper .menu ul li{
+        list-style: none;
+        margin-top: 5rem;
+    
+    }
+
+
+
+    .wrapper .button-link{
+        position: absolute;
+        top: 5%;
+        left: 80%;
+    }
+    .wrapper .logo{
+        background-image: url("assets/Logo.png");
+        background-repeat: no-repeat;
+        height: 10rem;
+        width: 10rem;
+        position: absolute;
+        left: 20%;
+        top: 1.5rem;
+        background-color: black;
+    }
+
+    .wrapper h2{
+        display: none;
+    }
+
+
+
+    .wrapper h1,
+    .wrapper p{
+        font-size: 8rem;
+        width: 100%;
+        line-height: 1rem;
+        font-weight: 900;
+        
+    }
+
+    .wrapper h1{
+        top: 25%;
+    }
+
+    .wrapper p{
+        top: 35%;
+    }
+
+    .wrapper .img-content{
+        position: absolute;
+        top: 52%;
+    }
+
+    .wrapper .img-content svg
+   {
+        width: 45rem;
+        height: 45rem;
+    }
+    .wrapper .img-content img{
+        width: 15rem;
+        height: 15rem;
+    }
+}
